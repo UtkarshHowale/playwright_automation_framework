@@ -18,7 +18,13 @@ export default defineConfig({
   fullyParallel: true,
   retries: 2,
   workers: 2,
-  reporter: 'html',
+   reporter: [
+        ['list'],
+        ['html', {
+            outputFolder: 'playwright-report',
+            open: 'never'
+        }]
+    ],
 
   use: {
     // baseURL: 'http://localhost:3000',
