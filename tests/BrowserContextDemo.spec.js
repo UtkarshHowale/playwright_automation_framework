@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test'
 import { chromium } from '@playwright/test'
 
-test('Open applications on separate browsers', async()=>{
+test('Open applications on separate browsers', {tag: '@smoke'}, async()=>{
 
     // Lounch browser
     const browser = await chromium.launch();
